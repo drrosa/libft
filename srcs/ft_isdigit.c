@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: drosa-ta <drosa-ta@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/04 14:44:24 by drosa-ta          #+#    #+#             */
-/*   Updated: 2017/12/06 13:55:52 by drosa-ta         ###   ########.fr       */
+/*   Created: 2017/12/06 13:44:16 by drosa-ta          #+#    #+#             */
+/*   Updated: 2017/12/06 13:56:27 by drosa-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <string.h>
-
-void	ft_putchar(char c);
-void	ft_putstr(char const *s);
-size_t	ft_strlen(const char *s);
-int		ft_strcmp(const char *s1, const char *s2);
-int		ft_atoi(const char *str);
-void	ft_putnbr(int n);
-char	*ft_itoa(int n);
-char    *ft_strdup(const char *s1);
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-
-#endif
+int	ft_isdigit(int c)
+{
+	if (c < '0' || c > '9')
+		return (0);
+	else
+		return (1);
+}
