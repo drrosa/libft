@@ -6,11 +6,11 @@
 /*   By: drosa-ta <drosa-ta@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 14:20:49 by drosa-ta          #+#    #+#             */
-/*   Updated: 2017/12/06 14:31:14 by drosa-ta         ###   ########.fr       */
+/*   Updated: 2017/12/06 14:49:05 by drosa-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcat(char *restrict s1, const char *restrict s2)
+char	*ft_strcat(char *s1, const char *s2)
 {
 	int	i;
 	int	size;

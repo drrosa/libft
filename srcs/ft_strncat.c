@@ -6,13 +6,13 @@
 /*   By: drosa-ta <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/17 22:01:58 by drosa-ta          #+#    #+#             */
-/*   Updated: 2017/12/06 14:43:56 by drosa-ta         ###   ########.fr       */
+/*   Updated: 2017/12/06 14:49:38 by drosa-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n)
+char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
 	size_t i;
 	size_t size;
