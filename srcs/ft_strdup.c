@@ -1,26 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: drosa-ta <drosa-ta@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/04 14:44:24 by drosa-ta          #+#    #+#             */
-/*   Updated: 2017/12/05 22:33:54 by drosa-ta         ###   ########.fr       */
+/*   Created: 2017/12/05 22:25:19 by drosa-ta          #+#    #+#             */
+/*   Updated: 2017/12/05 22:26:31 by drosa-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <string.h>
+#include <stdlib.h>
 
-void	ft_putchar(char c);
-void	ft_putstr(char const *s);
-size_t	ft_strlen(const char *s);
-int		ft_strcmp(const char *s1, const char *s2);
-int		ft_atoi(const char *str);
-void	ft_putnbr(int n);
-char	*ft_itoa(int n);
-char    *ft_strdup(const char *s1);
+char	*ft_strdup(const char *s1)
+{
+	char	*dst;
+	int		size;
+	int		i;
 
-#endif
+	size = 0;
+	i = 0;
+	while (s1[size])
+		size++;
+	dst = (char*)malloc(sizeof(*dst) * size + 1);
+	while (s1[i])
+	{
+		dst[i] = s1[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (dst);
+}
