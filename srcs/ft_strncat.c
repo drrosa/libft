@@ -6,7 +6,7 @@
 /*   By: drosa-ta <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/17 22:01:58 by drosa-ta          #+#    #+#             */
-/*   Updated: 2017/12/06 14:49:38 by drosa-ta         ###   ########.fr       */
+/*   Updated: 2017/12/06 15:02:41 by drosa-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	size_t i;
+	unsigned long i;
 	size_t size;
 
 	i = 0;
