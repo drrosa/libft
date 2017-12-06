@@ -6,7 +6,7 @@
 /*   By: drosa-ta <drosa-ta@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/04 14:44:24 by drosa-ta          #+#    #+#             */
-/*   Updated: 2017/12/06 14:33:55 by drosa-ta         ###   ########.fr       */
+/*   Updated: 2017/12/06 14:41:11 by drosa-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ int		ft_isprint(int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 char	*ft_strcat(char *restrict s1, const char *restrict s2);
+char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n);
 
 #endif
