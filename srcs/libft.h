@@ -6,7 +6,7 @@
 /*   By: drosa-ta <drosa-ta@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/04 14:44:24 by drosa-ta          #+#    #+#             */
-/*   Updated: 2017/12/06 13:55:52 by drosa-ta         ###   ########.fr       */
+/*   Updated: 2017/12/06 14:14:33 by drosa-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,8 @@ char	*ft_itoa(int n);
 char    *ft_strdup(const char *s1);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
+int		ft_isprint(int c);
+int		ft_tolower(int c);
+int		ft_toupper(int c);
 
 #endif
