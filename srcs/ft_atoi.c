@@ -6,7 +6,7 @@
 /*   By: drosa-ta <drosa-ta@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/05 18:10:42 by drosa-ta          #+#    #+#             */
-/*   Updated: 2017/12/05 18:39:22 by drosa-ta         ###   ########.fr       */
+/*   Updated: 2017/12/05 21:40:48 by drosa-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,14 @@ int	ft_atoi(const char *str)
 		if (str[i++] == '-')
 		{
 			sign = -1;
-			break;
+			break ;
 		}
-	}	
+	}
 	while (str[i])
 	{
 		if (str[i] - '0' < 0 || str[i] - '0' > 9)
-			break;
+			break ;
 		result = result * 10 + str[i++] - '0';
 	}
-	return (result * sign );
+	return (result * sign);
 }
