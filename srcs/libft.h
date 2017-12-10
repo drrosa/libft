@@ -6,7 +6,7 @@
 /*   By: drosa-ta <drosa-ta@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/04 14:44:24 by drosa-ta          #+#    #+#             */
-/*   Updated: 2017/12/09 15:06:19 by drosa-ta         ###   ########.fr       */
+/*   Updated: 2017/12/09 16:29:37 by drosa-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,7 @@ void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr_fd(int nb, int fd);
 void	*ft_memalloc(size_t size);
 void	ft_memdel(void **ap);
+char	*ft_strnew(size_t size);
+void	ft_strdel(char **ap);
 
 #endif
