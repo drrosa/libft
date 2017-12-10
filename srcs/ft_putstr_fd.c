@@ -6,7 +6,7 @@
 /*   By: drosa-ta <drosa-ta@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/04 19:30:10 by drosa-ta          #+#    #+#             */
-/*   Updated: 2017/12/08 14:50:44 by drosa-ta         ###   ########.fr       */
+/*   Updated: 2017/12/09 16:56:49 by drosa-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putstr_fd(char const *s, int fd)
 {
 	int n;
 
+	if (!s)
+		return ;
 	n = 0;
 	while (s[n])
 	{
