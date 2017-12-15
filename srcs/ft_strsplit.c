@@ -42,8 +42,8 @@ void	split(const char *str, char **ptr, char c)
 			j++;
 		}
 		ptr[j] = 0;
-
-		i++;
+		if(str[i])
+			i++;
 	}
 }
 
@@ -87,7 +87,7 @@ char	**ft_strsplit(char const *str, char c)
 		return (NULL);
 	temp = ft_strnew(ft_strlen(str));
 	size = ft_strcleanup(str, temp, c);
-	ptr = (char **)malloc(sizeof(char *) * (size + 2));
+	ptr = (char **)malloc(sizeof(char *) * (size + 1));
 	if (!ptr || !temp)
 		return (NULL);
 	if (str[0] == '\0' || size == 1)
@@ -101,14 +101,14 @@ char	**ft_strsplit(char const *str, char c)
 	return (ptr);
 }
 
-// #include <stdlib.h>
 // int main()
 // {
-// 	char *
+// 	char * src;
 //  src = "      split       this for   me  !       ";
+//  	// src = "0 0 0 0 0 0 0 0 0";
 // 	char **r = ft_strsplit(src, ' ');
 // 	int i;
 // 	i = 0;
-// 	while(r[i])
-// 		printf("%s ", r[i++]);
+// 	while(r[i] != '\0')
+// 		printf("%s\n", r[i++]);
 // }
