@@ -13,7 +13,6 @@
 #include <stdlib.h>
 #include "libft.h"
 
-#include <stdio.h>
 void	split(const char *str, char **ptr, char c)
 {
 	int i;
