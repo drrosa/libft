@@ -13,21 +13,25 @@
 #include <stdlib.h>
 #include "libft.h"
 
-char	*ft_itoa(int n)
+static int	count_digits(int n)
+{
+	int size;
+
+	size = 0;
+	while (n)
+	{
+		n = n / 10;
+		size++;
+	}
+	return (size);
+}
+
+char		*ft_itoa(int n)
 {
 	char	*result;
 	int		size;
-	int		tmp;
 
-	size = 0;
-	tmp = n;
-	while (tmp)
-	{
-		tmp = tmp / 10;
-		size++;
-	}
-	if (n <= 0)
-		size++;
+	size = (n <= 0) ? count_digits(n) + 1 : count_digits(n);
 	result = (char *)malloc(sizeof(char) * size + 1);
 	if (!result)
 		return (NULL);
