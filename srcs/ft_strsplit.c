@@ -6,7 +6,7 @@
 /*   By: drosa-ta <drosa-ta@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/10 21:42:05 by drosa-ta          #+#    #+#             */
-/*   Updated: 2017/12/14 00:00:40 by drosa-ta         ###   ########.fr       */
+/*   Updated: 2017/12/16 21:33:56 by drosa-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ void	split(const char *str, char **ptr, char c)
 			k = i + 1;
 			j++;
 		}
-		ptr[j] = 0;
 		if(str[i])
 			i++;
 	}
@@ -87,27 +86,14 @@ char	**ft_strsplit(char const *str, char c)
 	temp = ft_strnew(ft_strlen(str));
 	size = ft_strcleanup(str, temp, c);
 	ptr = (char **)malloc(sizeof(char *) * (size + 1));
+	ptr[size] = 0;
 	if (!ptr || !temp)
 		return (NULL);
-	if (str[0] == '\0' || size == 1)
-	{
+	if (str[0] == '\0' || (size == 1 && temp[0]=='\0'))
 		ptr[0] = 0;
-		return (ptr);
-	}
-	split(temp, ptr, c);
-	int i;
-	i = 0;
+	else if (size == 1 && ft_strlen(str) > 0)
+		ptr[0] = temp;
+	else
+		split(temp, ptr, c);
 	return (ptr);
 }
-
-// int main()
-// {
-// 	char * src;
-//  src = "      split       this for   me  !       ";
-//  	// src = "0 0 0 0 0 0 0 0 0";
-// 	char **r = ft_strsplit(src, ' ');
-// 	int i;
-// 	i = 0;
-// 	while(r[i] != '\0')
-// 		printf("%s\n", r[i++]);
-// }
