@@ -13,7 +13,7 @@
 #include <stdlib.h>
 #include "libft.h"
 
-void	split(const char *str, char **ptr, char c)
+static void	split(const char *str, char **ptr, char c)
 {
 	int i;
 	int j;
@@ -45,7 +45,7 @@ void	split(const char *str, char **ptr, char c)
 	}
 }
 
-int		ft_strcleanup(char const *str, char *result, char c)
+static int	ft_strcleanup(char const *str, char *result, char c)
 {
 	int i;
 	int j;
@@ -75,7 +75,7 @@ int		ft_strcleanup(char const *str, char *result, char c)
 	return (wc + 1);
 }
 
-char	**ft_strsplit(char const *str, char c)
+char		**ft_strsplit(char const *str, char c)
 {
 	char	**ptr;
 	char	*temp;
