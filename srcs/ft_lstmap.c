@@ -18,7 +18,7 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 	t_list	*result;
 
 	if (!lst)
-		return NULL;
+		return (NULL);
 	current_node = f(lst);
 	result = current_node;
 	while (lst->next)

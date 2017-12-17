@@ -40,7 +40,7 @@ void	split(const char *str, char **ptr, char c)
 			k = i + 1;
 			j++;
 		}
-		if(str[i])
+		if (str[i])
 			i++;
 	}
 }
@@ -54,7 +54,6 @@ int		ft_strcleanup(char const *str, char *result, char c)
 	i = 0;
 	j = 0;
 	wc = 0;
-
 	while (str[i])
 	{
 		while (str[i] == c)
@@ -78,9 +77,10 @@ int		ft_strcleanup(char const *str, char *result, char c)
 
 char	**ft_strsplit(char const *str, char c)
 {
-	char **ptr;
-	char *temp;
-	int size;
+	char	**ptr;
+	char	*temp;
+	int		size;
+
 	if (!str)
 		return (NULL);
 	temp = ft_strnew(ft_strlen(str));
@@ -89,7 +89,7 @@ char	**ft_strsplit(char const *str, char c)
 	ptr[size] = 0;
 	if (!ptr || !temp)
 		return (NULL);
-	if (str[0] == '\0' || (size == 1 && temp[0]=='\0'))
+	if (str[0] == '\0' || (size == 1 && temp[0] == '\0'))
 		ptr[0] = 0;
 	else if (size == 1 && ft_strlen(str) > 0)
 		ptr[0] = temp;
