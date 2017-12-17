@@ -6,7 +6,7 @@
 /*   By: drosa-ta <drosa-ta@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/04 14:44:24 by drosa-ta          #+#    #+#             */
-/*   Updated: 2017/12/09 23:45:08 by drosa-ta         ###   ########.fr       */
+/*   Updated: 2017/12/17 15:38:17 by drosa-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,5 +79,10 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+int					ft_str_isalpha(char *str);
+int					ft_str_isnumber(char *str);
+int					ft_str_isprint(char *str);
+char				*ft_str_tolower(char *str);
+char				*ft_str_toupper(char *str);
 
 #endif
