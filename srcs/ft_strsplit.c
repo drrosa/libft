@@ -20,11 +20,10 @@ static void	split(const char *str, char **ptr, char c)
 	int n;
 	int k;
 
-	i = 0;
+	i = -1;
 	j = 0;
 	k = 0;
-	n = 0;
-	while (str[i] != '\0')
+	while (str[++i] != '\0')
 	{
 		if (str[i + 1] == c || !str[i + 1])
 		{
@@ -33,15 +32,12 @@ static void	split(const char *str, char **ptr, char c)
 			k = 0;
 			while (k < n + 1)
 			{
-				ptr[j][k] = (char)str[(i - n - 1) + k + 1];
+				ptr[j][k] = (char)str[i - n + k];
 				k++;
 			}
-			i++;
-			k = i + 1;
+			k = ++i + 1;
 			j++;
 		}
-		if (str[i])
-			i++;
 	}
 }
 
@@ -59,10 +55,7 @@ static int	ft_strcleanup(char const *str, char *result, char c)
 		while (str[i] == c)
 			i++;
 		while (str[i] && str[i] != c)
-		{
-			result[j++] = str[i];
-			i++;
-		}
+			result[j++] = str[i++];
 		while (str[i] == c)
 			i++;
 		if (str[i] && str[i] != c)
