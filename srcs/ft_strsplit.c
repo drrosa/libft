@@ -30,12 +30,9 @@ static void	split(const char *str, char **ptr, char c)
 		{
 			n = i - k;
 			ptr[j] = ft_strnew(n + 1);
-			k = 0;
-			while (k < n + 1)
-			{
-				ptr[j][k] = (char)str[(i - n - 1) + k + 1];
-				k++;
-			}
+			k = -1;
+			while (++k < n + 1)
+				ptr[j][k] = (char)str[(i - n) + k];
 			i++;
 			k = i + 1;
 			j++;
