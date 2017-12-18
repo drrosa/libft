@@ -20,10 +20,11 @@ static void	split(const char *str, char **ptr, char c)
 	int n;
 	int k;
 
-	i = -1;
+	i = 0;
 	j = 0;
 	k = 0;
-	while (str[++i] != '\0')
+	n = 0;
+	while (str[i] != '\0')
 	{
 		if (str[i + 1] == c || !str[i + 1])
 		{
@@ -32,12 +33,15 @@ static void	split(const char *str, char **ptr, char c)
 			k = 0;
 			while (k < n + 1)
 			{
-				ptr[j][k] = (char)str[i - n + k];
+				ptr[j][k] = (char)str[(i - n - 1) + k + 1];
 				k++;
 			}
-			k = ++i + 1;
+			i++;
+			k = i + 1;
 			j++;
 		}
+		if (str[i])
+			i++;
 	}
 }
 
@@ -77,10 +81,12 @@ char		**ft_strsplit(char const *str, char c)
 	if (!str)
 		return (NULL);
 	temp = ft_strnew(ft_strlen(str));
+	if (!temp)
+		return (NULL);
 	size = ft_strcleanup(str, temp, c);
 	ptr = (char **)malloc(sizeof(char *) * (size + 1));
 	ptr[size] = 0;
-	if (!ptr || !temp)
+	if (!ptr)
 		return (NULL);
 	if (str[0] == '\0' || (size == 1 && temp[0] == '\0'))
 		ptr[0] = 0;
